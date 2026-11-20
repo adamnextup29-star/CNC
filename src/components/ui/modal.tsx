@@ -36,7 +36,7 @@ export function Modal({
               <Dialog.Description className="mt-2 text-sm text-muted">{description}</Dialog.Description>
             </div>
             <Dialog.Close
-              className="grid h-12 w-12 shrink-0 place-items-center rounded-md border border-line hover:border-amber"
+              className="grid h-12 w-12 shrink-0 place-items-center rounded-md border border-line hover:border-blue"
               aria-label="Close"
             >
               <X />
