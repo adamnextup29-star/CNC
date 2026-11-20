@@ -17,7 +17,7 @@ export function UploadHero({
 
   return (
     <section className="mx-auto w-full max-w-3xl px-4 py-8 sm:py-12">
-      <p className="font-display text-sm tracking-[0.22em] text-amber">ON THE BENCH</p>
+      <p className="font-display text-sm tracking-[0.22em] text-blue">ON THE BENCH</p>
       <h1 className="mt-2 max-w-xl font-display text-5xl leading-[0.92] text-text sm:text-7xl">
         Read the print before you pull tools.
       </h1>
@@ -27,7 +27,7 @@ export function UploadHero({
       </p>
 
       <div
-        className={`mt-8 rounded-lg border-2 border-dashed px-4 py-8 text-center ${over ? "border-amber bg-amber/5" : "border-line bg-panel"}`}
+        className={`mt-8 rounded-lg border-2 border-dashed px-4 py-8 text-center ${over ? "border-blue bg-blue/5" : "border-line bg-panel"}`}
         onDragOver={(event) => {
           event.preventDefault();
           setOver(true);
@@ -85,7 +85,7 @@ export function UploadHero({
           ["03", "Source", "Exact tool and stock links, or a search when no page matches."],
         ].map(([index, title, copy]) => (
           <li key={index} className="rounded-lg border border-line bg-bench p-4">
-            <p className="font-mono text-sm text-amber">{index}</p>
+            <p className="font-mono text-sm text-blue">{index}</p>
             <p className="mt-1 font-display text-2xl tracking-wide">{title}</p>
             <p className="mt-1 text-sm text-muted">{copy}</p>
           </li>

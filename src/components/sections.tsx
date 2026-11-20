@@ -49,7 +49,7 @@ export function SummarySection({ job }: { job: JobResult }) {
     <section id="summary" className="scroll-mt-32">
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
-          <p className="font-mono text-sm text-amber">
+          <p className="font-mono text-sm text-blue">
             {title.partNumber ?? "No part number"}
             {title.revision ? ` · REV ${title.revision}` : ""}
           </p>
@@ -193,7 +193,7 @@ export function DetailsSection({ job }: { job: JobResult }) {
 function SectionTitle({ kicker, title }: { kicker: string; title: string }) {
   return (
     <div>
-      <p className="font-mono text-xs uppercase tracking-[0.18em] text-amber">{kicker}</p>
+      <p className="font-mono text-xs uppercase tracking-[0.18em] text-blue">{kicker}</p>
       <h2 className="font-display text-4xl leading-none tracking-wide">{title}</h2>
     </div>
   );
@@ -262,7 +262,7 @@ export function VerificationSection({ job }: { job: JobResult }) {
           <ul className="space-y-2">
             {verification.corrections.map((item, index) => (
               <li key={`${item.itemId}-${index}`} className="rounded-lg border border-line bg-panel px-4 py-3">
-                <p className="font-mono text-xs text-amber">
+                <p className="font-mono text-xs text-blue">
                   {item.itemId} · {item.field}
                 </p>
                 <p className="mt-1 font-mono">
@@ -360,7 +360,7 @@ function ToolGroup({ title, items }: { title: string; items: ToolItem[] }) {
             {item.quantity ? <Badge tone="neutral">Qty {item.quantity}</Badge> : null}
           </div>
           <h4 className="mt-2 text-lg font-semibold">{item.name}</h4>
-          <p className="mt-1 font-mono text-sm text-amber">{item.spec}</p>
+          <p className="mt-1 font-mono text-sm text-blue">{item.spec}</p>
           <p className="mt-2 text-sm text-muted">{item.why}</p>
           {item.note ? <p className="mt-1 text-sm text-muted">{item.note}</p> : null}
           <ToolLinks item={item} />
@@ -381,7 +381,7 @@ function ToolLinks({ item }: { item: ToolItem }) {
           href={item.productUrl}
           target="_blank"
           rel="noreferrer"
-          className="inline-flex min-h-12 items-center gap-2 rounded-md bg-amber px-4 font-semibold text-ink"
+          className="inline-flex min-h-12 items-center gap-2 rounded-md bg-blue px-4 font-semibold text-ink"
         >
           {VENDOR_LABEL[item.vendor]}
           {item.partNumber ? ` · ${item.partNumber}` : ""}
@@ -398,7 +398,7 @@ function ToolLinks({ item }: { item: ToolItem }) {
           <ExternalLink className="h-4 w-4" />
         </a>
       ) : null}
-      <p className={`text-xs font-semibold uppercase tracking-wide ${item.linkType === "product" ? "text-good" : "text-amber"}`}>
+      <p className={`text-xs font-semibold uppercase tracking-wide ${item.linkType === "product" ? "text-good" : "text-blue"}`}>
         {item.linkType === "product" ? "Exact product page" : "Search, not an exact match"}
       </p>
       {alternates.length > 0 ? (

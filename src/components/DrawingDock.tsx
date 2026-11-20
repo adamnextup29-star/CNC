@@ -41,7 +41,7 @@ export function DrawingDock({
     <div className="rounded-lg border border-line bg-bench p-3">
       <div className="mb-2 flex items-center justify-between gap-2">
         <p className="font-mono text-xs uppercase tracking-wide text-muted">{label}</p>
-        <button type="button" className="text-sm font-semibold text-amber" onClick={onEnlarge}>
+        <button type="button" className="text-sm font-semibold text-blue" onClick={onEnlarge}>
           Enlarge
         </button>
       </div>

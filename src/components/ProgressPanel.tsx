@@ -24,7 +24,7 @@ export function ProgressPanel({
   return (
     <section className="rounded-lg border border-line bg-panel p-5">
       <div className="flex items-center gap-3">
-        <Loader2 className="animate-spin text-amber" />
+        <Loader2 className="animate-spin text-blue" />
         <div>
           <p className="font-display text-3xl leading-none tracking-wide">Working the sheet</p>
           <p className="mt-1 text-sm text-muted">{detail || "Preparing the image."}</p>
@@ -38,7 +38,7 @@ export function ProgressPanel({
             <li
               key={step.id}
               className={`flex min-h-11 items-center justify-between rounded-md border px-3 ${
-                state === "now" ? "border-amber text-amber" : "border-line text-muted"
+                state === "now" ? "border-blue text-blue" : "border-line text-muted"
               }`}
             >
               <span>{step.label}</span>
