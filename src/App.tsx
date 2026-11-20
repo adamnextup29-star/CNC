@@ -159,7 +159,7 @@ export default function App() {
       <header className="no-print sticky top-0 z-40 border-b border-line bg-ink/95 backdrop-blur">
         <div className="mx-auto flex min-h-16 max-w-6xl items-center justify-between gap-3 px-4">
           <div className="flex min-w-0 items-center gap-3">
-            <span className="grid h-10 w-10 shrink-0 place-items-center border border-amber font-display text-lg text-amber">
+            <span className="grid h-10 w-10 shrink-0 place-items-center border border-blue font-display text-lg text-blue">
               BR
             </span>
             <div className="min-w-0">
@@ -236,8 +236,8 @@ export default function App() {
             {result ? (
               <>
                 {result.demo ? (
-                  <div className="rounded-lg border border-amber/50 bg-amber/10 px-4 py-3">
-                    <p className="font-display text-2xl tracking-wide text-amber">DEMO</p>
+                  <div className="rounded-lg border border-blue/50 bg-blue/10 px-4 py-3">
+                    <p className="font-display text-2xl tracking-wide text-blue">DEMO</p>
                     <p className="text-sm">
                       Sample print FA-4417. This is not a reading of a file you uploaded.
                     </p>
@@ -254,7 +254,7 @@ export default function App() {
                       <a
                         key={id}
                         href={`#${id}`}
-                        className="inline-flex min-h-11 shrink-0 items-center rounded-full border border-line px-3 text-sm font-semibold hover:border-amber"
+                        className="inline-flex min-h-11 shrink-0 items-center rounded-full border border-line px-3 text-sm font-semibold hover:border-blue"
                       >
                         {label}
                       </a>
@@ -276,7 +276,7 @@ export default function App() {
       {result && showSheet ? (
         <button
           type="button"
-          className="no-print fixed right-3 bottom-[max(0.75rem,env(safe-area-inset-bottom))] z-30 h-16 w-16 overflow-hidden rounded-md border-2 border-amber bg-cream shadow-lg lg:hidden"
+          className="no-print fixed right-3 bottom-[max(0.75rem,env(safe-area-inset-bottom))] z-30 h-16 w-16 overflow-hidden rounded-md border-2 border-blue bg-cream shadow-lg lg:hidden"
           onClick={() => setLightbox(true)}
           aria-label="Enlarge the print"
         >
